@@ -1,0 +1,97 @@
+{
+  "name": "pierre_thiollent",
+  "version": "0.0.1",
+  "description": "Personal npm card for Pierre Thiollent",
+  "main": "dist/card.js",
+  "unpkg": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PierreThiollent/Personal-NPM-card.git"
+  },
+  "scripts": {
+    "prepare": "node src/htmlify",
+    "prepublishOnly": "rm -rf dist && webpack"
+  },
+  "bin": {
+    "pierre_thiollent": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "index.html"
+  ],
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Pierre Thiollent",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "ansi-to-html": "^0.6.9",
+    "babel-loader": "^8.0.4",
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.1",
+    "chalker": "^1.0.0",
+    "lodash.get": "^4.4.2",
+    "webpack": "^4.28.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
+  },
+  "myCard": {
+    "info": {
+      "name": "Pierre Thiollent",
+      "twitter": "Pierre_t76",
+      "npm": "~pierre_thiollent",
+      "github": "PierreThiollent",
+      "linkedin": "pierre-thiollent/",
+      "web": "https://pierre-thiollent.fr",
+      "work": "👨🏻‍💻 Front End & Mobile Developer 📱"
+    },
+    "data": [
+      "          <white>{{name}}</>",
+      "",
+      {
+        "label": "<tomato>Work</>",
+        "text": "{{work}}"
+      },
+      "",
+      {
+        "label": "<tomato>Twitter</>",
+        "text": "https://twitter.com/{{twitter}}",
+        "when": "{{twitter}}"
+      },
+      {
+        "label": "<tomato>NPM</>",
+        "text": "https://www.npmjs.com/<red>~{{npm}}</>",
+        "when": "{{npm}}"
+      },
+      {
+        "label": "<tomato>GitHub</>",
+        "text": "https://github.com/{{github}}",
+        "when": "{{github}}"
+      },
+      {
+        "label": "<tomato>LinkedIn</>",
+        "text": "https://www.linkedin.com/in/{{linkedin}}",
+        "when": "{{linkedin}}"
+      },
+      {
+        "label": "<tomato>Site</>",
+        "text": "{{web}}",
+        "when": "{{web}}"
+      },
+      "",
+      {
+        "label": "Card",
+        "text": "<tomato>npx</> {{_packageName}}"
+      }
+    ]
+  }
+}
