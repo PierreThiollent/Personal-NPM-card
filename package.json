@@ -1,6 +1,6 @@
 {
   "name": "pierre_thiollent",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Personal npm card for Pierre Thiollent",
   "main": "dist/card.js",
   "unpkg": "index.html",
