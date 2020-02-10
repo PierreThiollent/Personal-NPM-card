@@ -47,6 +47,7 @@
   "myCard": {
     "info": {
       "name": "Pierre Thiollent",
+      "handle": "NPM card",
       "twitter": "Pierre_t76",
       "npm": "~pierre_thiollent",
       "github": "PierreThiollent",
@@ -55,7 +56,7 @@
       "work": "👨🏻‍💻 Front End & Mobile Developer 📱"
     },
     "data": [
-      "          <white>{{name}}</>",
+      "          <white>{{name}}</><tomato> / </>{{handle}}",
       "",
       {
         "label": "<tomato>Work</>",
